@@ -15,6 +15,7 @@ taskInput.addEventListener('keydown', function (e) {
   }
 });
 
+// sets filter
 filterButtons.forEach(function (button) {
   button.addEventListener('click', function () {
     filterButtons.forEach(btn => btn.classList.remove('active'));
@@ -34,6 +35,8 @@ filterButtons.forEach(function (button) {
 
 
 function addTask() {
+
+  const text = taskInput.value;
 
   const newTask = {
     id: Date.now(),
